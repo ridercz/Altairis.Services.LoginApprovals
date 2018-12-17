@@ -2,6 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Altairis.Services.LoginApprovals</PackageId>
+    <Title>Login Approval services for ASP.NET Core</Title>
+    <Authors>Michal Altair Valášek</Authors>
+    <Company>Altairis, s. r. o.</Company>
+    <Description>Alternate authentication method allowing login with confirmation from different session, already logged in.</Description>
+    <Copyright>(c) Altairis, 2018</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/ridercz/Altairis.Services.LoginApprovals/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/ridercz/Altairis.Services.LoginApprovals</PackageProjectUrl>
+    <Version>1.0.0-rc1</Version>
+    <Product>Altairis Conventional Metadata Providers</Product>
+    <RepositoryUrl>https://github.com/ridercz/Altairis.Services.LoginApprovals.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageIconUrl>https://raw.githubusercontent.com/ridercz/Altairis.Services.LoginApprovals/master/NuGet-64x64.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
