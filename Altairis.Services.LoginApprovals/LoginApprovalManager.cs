@@ -28,7 +28,7 @@ namespace Altairis.Services.LoginApprovals {
             var las = new LoginApprovalSession {
                 RequesterIpAddress = this.httpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString(),
                 RequesterUserAgent = this.httpContextAccessor.HttpContext.Request.Headers?["User-Agent"],
-                Expiration = DateTime.Now.Add(this.options.Expiration)
+                Expiration = DateTime.Now.Add(this.options.Timeout)
             };
             return this.sessionStore.Create(las);
         }

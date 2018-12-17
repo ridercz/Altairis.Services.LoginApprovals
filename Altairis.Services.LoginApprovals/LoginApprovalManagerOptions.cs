@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace Altairis.Services.LoginApprovals {
     public class LoginApprovalManagerOptions {
 
-        public TimeSpan Expiration { get; set; } = TimeSpan.FromMinutes(5);
+        public TimeSpan Timeout { get; set; } = TimeSpan.FromMinutes(5);
 
     }
 }
