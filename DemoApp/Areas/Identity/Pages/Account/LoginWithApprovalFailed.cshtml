@@ -1,0 +1,16 @@
+﻿@page
+@{ ViewData["Title"] = "Log in"; }
+
+<h1>@ViewData["Title"]</h1>
+<h4>Use another device to approve your login.</h4>
+<div class="row">
+    <div class="col-md-8">
+        <p>The login approval request was either denied or timed out.</p>
+        <div class="form-group">
+            <p>
+                <a asp-page="LoginWithApproval" class="btn btn-primary">Try again</a>
+                <a asp-page="Login" class="btn btn-outline-primary">Use other way</a>
+            </p>
+        </div>
+    </div>
+</div>

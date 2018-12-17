@@ -1,0 +1,20 @@
+﻿@page "{lasid}/{handler?}"
+@model DemoApp.Areas.Identity.Pages.Account.Manage.ApproveLoginModel
+@{ ViewData["Title"] = "Approve login"; }
+
+<h1>@ViewData["Title"]</h1>
+<h4>Approve login on another device.</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <p>Do you want to confirm the login request from another device? The request ID is <strong>@this.Model.DisplaySessionId</strong></p>
+            <ul>
+                <li>IP address: <code>@this.Model.RequesterIpAddress</code></li>
+                <li>User agent: <code>@this.Model.RequesterUserAgent</code></li>
+            </ul>
+            <button asp-page-handler="Approve" class="btn btn-primary">Yes</button>
+            <button asp-page-handler="Decline" class="btn btn-primary">No</button>
+        </form>
+    </div>
+</div>
