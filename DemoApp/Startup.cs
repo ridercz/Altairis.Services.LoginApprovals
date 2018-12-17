@@ -42,6 +42,9 @@ namespace DemoApp {
 
             // Add login approvals services with default options
             services.AddLoginApprovals();
+            //services.Configure<Altairis.Services.LoginApprovals.LoginApprovalManagerOptions>(options => {
+            //    options.Timeout = TimeSpan.FromMinutes(10);
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
