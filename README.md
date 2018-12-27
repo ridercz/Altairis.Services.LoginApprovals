@@ -1,3 +1,5 @@
+[![NuGet Status](https://img.shields.io/nuget/v/Altairis.Services.LoginApprovals.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/Altairis.Services.LoginApprovals/)
+
 # Altairis.Services.LoginApprovals
 
 This library allows passwordless login to web sites and uses another device to approve given login.
