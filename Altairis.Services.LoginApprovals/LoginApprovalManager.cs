@@ -83,5 +83,12 @@ namespace Altairis.Services.LoginApprovals {
             this.sessionStore.Delete(lasid);
         }
 
+        public string FormatIdForDisplay(string lasid) {
+            if (lasid == null) throw new ArgumentNullException(nameof(lasid));
+            if (string.IsNullOrWhiteSpace(lasid)) throw new ArgumentException("Value cannot be empty or whitespace only string.", nameof(lasid));
+            if (lasid.Length < 12) throw new ArgumentException("Value is too short, 12 or more characters expected.", nameof(lasid));
+            return string.Join("-", lasid.Substring(0, 4), lasid.Substring(4, 4), lasid.Substring(8, 4));
+        }
+
     }
 }

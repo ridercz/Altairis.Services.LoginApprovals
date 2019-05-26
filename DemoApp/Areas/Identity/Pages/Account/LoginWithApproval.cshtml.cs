@@ -43,7 +43,7 @@ namespace DemoApp.Areas.Identity.Pages.Account {
                     case LoginApprovalSessionStatus.Waiting:
                     default:
                         // Waiting - display URL and refresh
-                        this.DisplaySessionId = string.Join('-', lasid.Substring(0, 4), lasid.Substring(4, 4));
+                        this.DisplaySessionId = this.loginApprovalManager.FormatIdForDisplay(lasid);
                         this.ApprovalUrl = this.Url.Page("Manage/ApproveLogin",
                             pageHandler: null,
                             values: new { lasid },

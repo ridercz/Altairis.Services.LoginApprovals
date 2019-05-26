@@ -24,7 +24,7 @@ namespace DemoApp.Areas.Identity.Pages.Account.Manage {
             var las = this.loginApprovalManager.GetLoginApprovalInfo(lasid);
             if (las == null) return this.NotFound();
 
-            this.DisplaySessionId = string.Join('-', las.SessionId.Substring(0, 4), las.SessionId.Substring(4, 4));
+            this.DisplaySessionId = this.loginApprovalManager.FormatIdForDisplay(las.SessionId);
             this.RequesterIpAddress = las.RequesterIpAddress;
             this.RequesterUserAgent = las.RequesterUserAgent;
 
