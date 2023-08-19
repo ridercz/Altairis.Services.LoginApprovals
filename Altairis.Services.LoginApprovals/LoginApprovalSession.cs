@@ -1,23 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿namespace Altairis.Services.LoginApprovals;
 
-namespace Altairis.Services.LoginApprovals {
+public class LoginApprovalSession {
 
-    public class LoginApprovalSession {
+    public string SessionId { get; set; } = string.Empty;
 
-        public string SessionId { get; set; }
+    public required DateTime Expiration { get; set; }
 
-        public DateTime Expiration { get; set; }
+    public string? RequesterUserAgent { get; set; }
 
-        public string RequesterUserAgent { get; set; }
+    public required string RequesterIpAddress { get; set; }
 
-        public string RequesterIpAddress { get; set; }
+    public bool Approved { get; set; }
 
-        public bool Approved { get; set; }
+    public string? UserName { get; set; }
 
-        public string UserName { get; set; }
-
-    }
 }
